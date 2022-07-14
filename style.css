@@ -1,0 +1,159 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", Courier, monospace;
+  height: 100vh;
+  background: linear-gradient(62deg, #9b1515, #c90101, #d80505, #880e0e);
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  max-width: 100%;
+  height: 100vh;
+  background-image: url(media/forest.jpg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#hp1 {
+  border: #f5f5f5 solid 4px;
+  color: #ffffff;
+  background: transparent;
+  box-shadow: 0 0 10px #f1f3e8, 0 0 40px #d1cfb7, 0 0 80px #ececec;
+}
+
+#hp2 {
+  border: #fffef6 solid 4px;
+  color: #ffffff;
+  background: transparent;
+  box-shadow: 0 0 10px #f1f3e8, 0 0 40px #d1cfb7, 0 0 80px #ececec;
+}
+
+tr,
+td {
+  padding: 15px;
+}
+
+.btn {
+  margin: auto 1px;
+  border: 1px solid #cdf321;
+  font-size: 15px;
+  display: block;
+  color: #ffffff;
+  background: transparent;
+  box-shadow: 0 0 10px #cdf321, 0 0 40px #887f04, 0 0 80px #cdf321;
+}
+
+p {
+  font-size: xx-large;
+  font-weight: 900;
+  font-family: consolas;
+}
+
+table.table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* OFF / ON MUSIC */
+
+.toggle {
+  background: rgba(0, 0, 0, 0.1);
+  width: 77px;
+  height: 22px;
+  position: relative;
+  -webkit-user-select: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: arial;
+  line-height: 22px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+.toggle .on,
+.toggle .off {
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  height: 24px;
+  width: 29px;
+  transition: all 0.2s;
+}
+.toggle .off {
+  right: 10px;
+  color: #0d98d8;
+}
+.toggle .on {
+  left: 5px;
+  color: #fff;
+}
+.toggle .slide {
+  transition: all 0.2s ease;
+  position: absolute;
+  left: 3px;
+  top: -1px;
+  bottom: 0;
+  background: #aa2222;
+  width: 30px;
+  height: 25px;
+  z-index: 1;
+  border-radius: 5px;
+}
+.toggle:hover .slide {
+  background: rgb(236, 215, 215);
+}
+.toggle.active .slide {
+  left: 36px;
+}
+.toggle.active .on {
+  color: #ec1009;
+}
+.toggle.active .off {
+  color: #fff;
+}
+.musicicon h3 {
+  text-align: center;
+  font-size: medium;
+  font-family: Arial;
+  line-height: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+.musicplayer {
+  width: 140px;
+  margin: 40px auto 0 auto;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
